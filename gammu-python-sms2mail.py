@@ -8,6 +8,11 @@ TO_EMAIL = 'you@yourdomain.com'
 sm = gammu.StateMachine()
 sm.ReadConfig()
 sm.Init()
+try:
+    sm.EnterSecurityCode('PIN', '0000')
+except:
+    #pincode already entered previous run
+    pass
 
 
 def sms_getall(sm):

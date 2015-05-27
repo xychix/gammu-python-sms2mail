@@ -24,7 +24,22 @@ its `gammu`section. Here's a simple example:
 [gammu]
 Connection = at
 Device = /dev/ttyUSB0
+
 ```
+
+Cronjob
+-------
+Starting the script using a cronjob works fine. The init takes a while. Maybe
+building a loop that polls the device every 20 seconds is more efficient. Will do
+that later.
+
+```
+# m h  dom mon dow   command
+* *  *   *   *     /home/yourusername/bin/sms2mail.py
+```
+
+offcourse the file needs to be in the proper location and I've found that you'd
+need to put the gammu config in the same dir as the python script in such a setup.
 
 Licensing
 ---------
