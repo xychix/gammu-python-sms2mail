@@ -2,7 +2,7 @@
 import gammu
 import smtplib
 
-SMTPSERVER = 'smtp.yourdomain.com'
+SMTP_SERVER = 'smtp.yourdomain.com'
 TO_EMAIL = 'you@yourdomain.com'
 
 sm = gammu.StateMachine()
