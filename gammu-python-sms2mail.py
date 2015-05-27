@@ -50,7 +50,7 @@ def sms_getall(sm):
                     body = body+e['Buffer']
         mail_send(subj,body,m['Number'])
         for l in loc:
-             sms_del(sm,l,1)
+             sms_del(sm,int(l),1)
 
 def sms_del(sm,loc,folder):
     sm.DeleteSMS(folder, loc)
